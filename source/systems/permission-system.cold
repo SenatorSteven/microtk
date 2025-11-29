@@ -35,7 +35,7 @@ SOFTWARE. */
 #include <unistd.h>
 #include <sys/types.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/pthread.hold"
 #include "../../headers/permissions.hold"
 #include "../../headers/stdint.hold"

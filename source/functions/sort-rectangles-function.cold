@@ -26,7 +26,7 @@ SOFTWARE. */
 #include <stdint.h>
 #include <xcb/xcb.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/x.hold"
 #include "../../headers/functions/sort-rectangles-function.hold"
 

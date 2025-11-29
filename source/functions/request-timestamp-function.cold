@@ -27,7 +27,7 @@ SOFTWARE. */
 #include <stdlib.h>
 #include <xcb/xcb.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/x.hold"
 #include "../../headers/systems/mutex-system.hold"
 #include "../../headers/systems/memory-management-system.hold"

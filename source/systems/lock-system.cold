@@ -29,7 +29,7 @@ SOFTWARE. */
 #include <signal.h>
 #include <stdint.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/pthread.hold"
 #include "../../headers/signal.hold"
 #include "../../headers/stdint.hold"

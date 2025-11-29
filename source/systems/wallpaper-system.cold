@@ -29,7 +29,7 @@ SOFTWARE. */
 #include <stdint.h>
 #include <stdio.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/pthread.hold"
 #include "../../headers/stdint.hold"
 #include "../../headers/stdio.hold"

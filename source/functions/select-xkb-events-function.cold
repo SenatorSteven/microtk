@@ -33,7 +33,7 @@ SOFTWARE. */
 #include <xcb/xkb.h>
 #include <X11/Xlib.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/pthread.hold"
 #include "../../headers/stdint.hold"
 #include "../../headers/stdio.hold"

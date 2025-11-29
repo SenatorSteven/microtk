@@ -26,7 +26,7 @@ SOFTWARE. */
 #include <stdint.h>
 #include <xcb/xinput.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/functions/fp3232-to-double-function.hold"
 
 FP3232TODOUBLE(){

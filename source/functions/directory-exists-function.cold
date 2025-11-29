@@ -26,7 +26,7 @@ SOFTWARE. */
 #include <stdint.h>
 #include <sys/stat.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/stdint.hold"
 #include "../../headers/sys-stat.hold"
 #include "../../headers/functions/directory-exists-function.hold"

@@ -27,7 +27,7 @@ SOFTWARE. */
 
 #include <stdint.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/stdint.hold"
 #include "../../headers/systems/shared-memory-system.hold"
 

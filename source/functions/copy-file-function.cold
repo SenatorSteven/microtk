@@ -30,7 +30,7 @@ SOFTWARE. */
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/systems/mutex-system.hold"
 #include "../../headers/systems/memory-management-system.hold"
 #include "../../headers/functions/get-stream-size-function.hold"

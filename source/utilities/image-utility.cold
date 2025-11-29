@@ -27,7 +27,7 @@ SOFTWARE. */
 
 #include <stdint.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/utilities/image-utility.hold"
 
 CREATEIMAGE(){

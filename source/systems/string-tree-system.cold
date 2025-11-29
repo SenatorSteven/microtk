@@ -34,7 +34,7 @@ SOFTWARE. */
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/stdint.hold"
 #include "../../headers/stdio.hold"
 #include "../../headers/stdlib.hold"

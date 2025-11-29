@@ -38,7 +38,6 @@ function main(){
 	[ $true        ] && { cd $(dirname $0);                                                                                                                                                    } || :;
 	[ ! -f "$NAME" ] && { cd $(cd $(dirname $BASH_SOURCE) && pwd);                                                                                                                             } || :;
 	[ ! -f "$NAME" ] && { printf "$NAME: could not find $NAME directory\n" 1>&2;                                                                                                     return 1; } || :;
-	[ $true        ] && { cd "/home/steven/Documents/other developments/modular-de/microtoolkit - gw/";                                                                                        } || :;
 	[ $true        ] && { systems=$(cat ./systems.csv);                                                                                                                                        } || :;
 	[ $true        ] && { utilities=$(cat ./utilities.csv);                                                                                                                                    } || :;
 	[ $true        ] && { functions=$(cat ./functions.csv);                                                                                                                                    } || :;

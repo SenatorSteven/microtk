@@ -28,7 +28,7 @@ SOFTWARE. */
 #include <pthread.h>
 #include <stdint.h>
 
-#include "../../../cold/cold.hold"
+#include "../../headers/cold/cold.hold"
 #include "../../headers/systems/mutex-system.hold"
 #include "../../headers/systems/memory-management-system.hold"
 #include "../../headers/functions/load-bmp-function.hold"
