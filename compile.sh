@@ -30,19 +30,25 @@ true=1;
 false=0;
 
 function main(){
-	[ $true        ] && { local systems="";                                                                                                                                                    } || :;
-	[ $true        ] && { local utilities="";                                                                                                                                                  } || :;
-	[ $true        ] && { local functions="";                                                                                                                                                  } || :;
-	[ $true        ] && { local folder="/tmp/microtk";                                                                                                                                         } || :;
+	[ $true        ] && { local name="microtk";                                                                                                                                                } || :;
+	[ $true        ] && { local folder="/tmp/$name";                                                                                                                                           } || :;
 	[ $true        ] && { local libraries="-lxcb -lxcb-composite -lxcb-damage -lxcb-randr -lxcb-render -lxcb-shape -lxcb-xfixes -lxcb-xinput -lxcb-xkb -lxcb-xtest -lX11 -lX11-xcb";           } || :;
-	[ $true        ] && { cd $(dirname $0);                                                                                                                                                    } || :;
-	[ ! -f "$NAME" ] && { cd $(cd $(dirname $BASH_SOURCE) && pwd);                                                                                                                             } || :;
+	[ $true        ] && { local parameters=();                                                                                                                                                 } || :;
+	[ $true        ] && { cd "${BASH_SOURCE%/*}";                                                                                                                                              } || :;
 	[ ! -f "$NAME" ] && { printf "$NAME: could not find $NAME directory\n" 1>&2;                                                                                                     return 1; } || :;
-	[ $true        ] && { systems=$(cat ./systems.csv);                                                                                                                                        } || :;
-	[ $true        ] && { utilities=$(cat ./utilities.csv);                                                                                                                                    } || :;
-	[ $true        ] && { functions=$(cat ./functions.csv);                                                                                                                                    } || :;
-	[ $true        ] && { ./compile/compile.sh header-folder "headers" source-folder "source" debug-folder "$folder/debug" output-folder "$folder/output" record-folder "$folder/record" systems "$systems" utilities "$utilities" functions "$functions" mains "main" executables "modular-de" libraries "$libraries" "$@"; } || :;
-	[ $true        ] && {                                                                                                                                                            return 0; } || :;
+	[ $true        ] && { rm -rf "$folder";                                                                                                                                                    } || :;
+	[ $true        ] && { parameters+=(header-folder "headers");                                                                                                                               } || :;
+	[ $true        ] && { parameters+=(source-folder "source");                                                                                                                                } || :;
+	[ $true        ] && { parameters+=(debug-folder "$folder/debug");                                                                                                                          } || :;
+	[ $true        ] && { parameters+=(output-folder "$folder/output");                                                                                                                        } || :;
+	[ $true        ] && { parameters+=(record-folder "$folder/record");                                                                                                                        } || :;
+	[ $true        ] && { parameters+=(systems "$(cat ./systems.csv)");                                                                                                                        } || :;
+	[ $true        ] && { parameters+=(utilities "$(cat ./utilities.csv)");                                                                                                                    } || :;
+	[ $true        ] && { parameters+=(functions "$(cat ./functions.csv)");                                                                                                                    } || :;
+	[ $true        ] && { parameters+=(mains "main");                                                                                                                                          } || :;
+	[ $true        ] && { parameters+=(executables "microtk");                                                                                                                                 } || :;
+	[ $true        ] && { parameters+=(libraries "$libraries");                                                                                                                                } || :;
+	[ $true        ] && { ./compile/compile.sh "${parameters[@]}" "$@";                                                                                                              return 0; } || :;
 }
 
 main "$@";
